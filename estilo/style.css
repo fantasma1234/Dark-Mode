@@ -5,3 +5,61 @@
     padding: 0px;
     box-sizing: border-box;
 }
+
+body {
+    background-color: whitesmoke;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    margin: 0px;
+    transition: background 0.2s linear;
+}
+
+body.dark {
+    background-color: #232c35;
+}
+
+.checkbox {
+    opacity: 0;
+    position: absolute;
+}
+
+.label {
+    background-color: black;
+    border-radius: 50px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    position: relative;
+    height: 30px;
+    width: 67px;
+    transform: scale(1.5);
+}
+
+.circulo {
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 1.5px;
+    left: 2px;
+    height: 27px;
+    width: 27px;
+    transform: translateX(0px);
+    transition: transform 0.3s linear;
+}
+
+.checkbox:checked + .label .circulo {
+    transform: translateX(36px);
+}
+
+.light {
+    color: orange;
+}
+
+.dark {
+    color: yellow;
+}
